@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|c:\\users\\vitor\\desktop\\appregistromultas\\appregistromultas\\formulario\\formcadastromulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|solutionrelative:appregistromultas\\formulario\\formcadastromulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|c:\\users\\vitor\\desktop\\appregistromultas\\appregistromultas\\formulario\\formcadastromulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|solutionrelative:appregistromultas\\formulario\\formcadastromulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|c:\\users\\vitor\\desktop\\appregistromultas\\appregistromultas\\formulario\\formconsultaveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|solutionrelative:appregistromultas\\formulario\\formconsultaveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormCadastroMulta.cs",
+              "DocumentMoniker": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormCadastroMulta.cs",
+              "RelativeDocumentMoniker": "AppRegistroMultas\\Formulario\\FormCadastroMulta.cs",
+              "ToolTip": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormCadastroMulta.cs",
+              "RelativeToolTip": "AppRegistroMultas\\Formulario\\FormCadastroMulta.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T18:12:29.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCadastroMulta.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormCadastroMulta.cs",
+              "RelativeDocumentMoniker": "AppRegistroMultas\\Formulario\\FormCadastroMulta.cs",
+              "ToolTip": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormCadastroMulta.cs [Design]",
+              "RelativeToolTip": "AppRegistroMultas\\Formulario\\FormCadastroMulta.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T18:09:40.244Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormConsultaVeiculo.cs",
+              "DocumentMoniker": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormConsultaVeiculo.cs",
+              "RelativeDocumentMoniker": "AppRegistroMultas\\Formulario\\FormConsultaVeiculo.cs",
+              "ToolTip": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormConsultaVeiculo.cs",
+              "RelativeToolTip": "AppRegistroMultas\\Formulario\\FormConsultaVeiculo.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAzwCAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T15:47:24.26Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
