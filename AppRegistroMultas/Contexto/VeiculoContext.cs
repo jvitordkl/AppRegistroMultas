@@ -82,6 +82,58 @@ namespace AppRegistroMultas.Contexto
                 conexao.Close(); // Fecha a conexao
             }
         }// Fim do método InserirVeiculo
+
+        public void DeletarVeiculo(int id)
+        {
+            // Comandos para inserir o veiculo no MySql
+            string sql = "DELETE FROM veiculo where id = @id";
+
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(sql, conexao); // Comando que vai inserir o veiculo no MYSQL
+                // Adicionando parametros para evitar SQL Injection
+                comando.Parameters.AddWithValue("@id", id);
+                conexao.Open(); // Abre a conexao com o MySql
+                int linhasAfetadas = comando.ExecuteNonQuery(); // Executa e mostra as linhas que foram afetadas
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception("Erro ao apagar veiculo!");
+            }
+            finally
+            {
+                conexao.Close(); // Fecha a conexao
+            }
+        }
+
+        public void AtualizarVeiculo(Veiculo veiculo)
+        {
+            // Comandos para inserir o veiculo no MySql
+            string sql = "UPDATE veiculo SET MODELO = @modelo,MARCA=@marca,PLACA=@placa,ANO=@ano WHERE ID=@id";
+
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(sql, conexao); // Comando que vai atualizar o veiculo no MYSQL
+
+                // Adicionando parametros para evitar SQL Injection
+                comando.Parameters.AddWithValue("@modelo", veiculo.Modelo);
+                comando.Parameters.AddWithValue("@marca", veiculo.Marca);
+                comando.Parameters.AddWithValue("@placa", veiculo.Placa);
+                comando.Parameters.AddWithValue("@ano", veiculo.Ano);
+                comando.Parameters.AddWithValue("@id", veiculo.Id);
+
+                conexao.Open(); // Abre a conexao com o MySql
+                int linhasAfetadas = comando.ExecuteNonQuery(); // Executa e mostra as linhas que foram afetadas
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception("Erro ao atualizar veiculo!");
+            }
+            finally
+            {
+                conexao.Close(); // Fecha a conexao
+            }
+        }
     }//fim  da classe
 
 } //fim do nameSpace

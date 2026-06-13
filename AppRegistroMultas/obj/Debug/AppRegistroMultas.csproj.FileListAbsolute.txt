@@ -105,3 +105,4 @@ C:\Users\Vitor\Desktop\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegistro
 C:\Users\Vitor\Desktop\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegis.D67EA659.Up2Date
 C:\Users\Vitor\Desktop\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegistroMultas.exe
 C:\Users\Vitor\Desktop\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegistroMultas.pdb
+C:\Users\Vitor\Desktop\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegistroMultas.Formulario.FormEditarVeiculo.resources

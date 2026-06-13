@@ -124,6 +124,12 @@
     <Compile Include="Formulario\FormConsultaVeiculo.Designer.cs">
       <DependentUpon>FormConsultaVeiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario\FormEditarVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormEditarVeiculo.Designer.cs">
+      <DependentUpon>FormEditarVeiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Multa.cs" />
     <Compile Include="Models\Veiculo.cs" />
     <Compile Include="Program.cs" />
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormConsultaVeiculo.resx">
       <DependentUpon>FormConsultaVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormEditarVeiculo.resx">
+      <DependentUpon>FormEditarVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

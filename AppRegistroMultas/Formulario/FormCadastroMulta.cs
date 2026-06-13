@@ -38,6 +38,8 @@ namespace AppRegistroMultas.Formulario
                 txtPlaca.Text = veiculoSelect.Placa;
                 txtAno.Text = veiculoSelect.Ano;
                 id = veiculoSelect.Id;
+                Limpar();
+                dtTabela.DataSource = null;
             }
             contExc++;
         }
@@ -53,18 +55,22 @@ namespace AppRegistroMultas.Formulario
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-            Multa multa = new Multa();
-            multa.Descricao = txtDescricao.Text.ToString();
-            multa.ValorMulta = Convert.ToDecimal(txtValor.Text);
-            multa.VeiculoId = Convert.ToInt32(id);
-            listaMultas.Add(multa);
-            dtTabela.DataSource = listaMultas.ToList();
-            Limpar();
+            if(txtValor.Text != "" && txtDescricao.Text != "" && id!=0)
+            {
+                Multa multa = new Multa();
+                multa.Descricao = txtDescricao.Text.ToString();
+                multa.ValorMulta = Convert.ToDecimal(txtValor.Text);
+                multa.VeiculoId = Convert.ToInt32(id);
+                listaMultas.Add(multa);
+                dtTabela.DataSource = listaMultas.ToList();
+                Limpar();
+            }
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
             Limpar();
+            dtTabela.DataSource = null;
         }
 
         private void btSalvar_Click(object sender, EventArgs e)
