@@ -106,3 +106,4 @@ C:\Users\Vitor\Desktop\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegis.D6
 C:\Users\Vitor\Desktop\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegistroMultas.exe
 C:\Users\Vitor\Desktop\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegistroMultas.pdb
 C:\Users\Vitor\Desktop\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegistroMultas.Formulario.FormEditarVeiculo.resources
+C:\Users\Vitor\Desktop\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegistroMultas.Formulario.FormEditarMulta.resources

@@ -93,6 +93,7 @@
             this.btEditarMulta.TabIndex = 34;
             this.btEditarMulta.Text = "EDITAR MULTA";
             this.btEditarMulta.UseVisualStyleBackColor = true;
+            this.btEditarMulta.Click += new System.EventHandler(this.btEditarMulta_Click);
             // 
             // Form1
             // 

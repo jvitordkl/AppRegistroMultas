@@ -75,5 +75,54 @@ namespace AppRegistroMultas.Contexto
                 conexao.Close();
             }
         }// Fim do método InserirMulta
+
+        public void DeletarMulta(int id)
+        {
+            // Comandos para inserir o veiculo no MySql
+            string sql = "DELETE FROM multa where id = @id";
+
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(sql, conexao); // Comando que vai inserir o veiculo no MYSQL
+                // Adicionando parametros para evitar SQL Injection
+                comando.Parameters.AddWithValue("@id", id);
+                conexao.Open(); // Abre a conexao com o MySql
+                int linhasAfetadas = comando.ExecuteNonQuery(); // Executa e mostra as linhas que foram afetadas
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception("Erro ao apagar multa!");
+            }
+            finally
+            {
+                conexao.Close(); // Fecha a conexao
+            }
+        }
+
+        public void EditarMulta(Multa multa)
+        {
+            // Comandos para inserir o veiculo no MySql
+            string sql = "UPDATE multa SET DESCRICAO = @descricao, VALORMULTA=@valorMulta WHERE ID=@id";
+
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(sql, conexao); // Comando que vai atualizar o veiculo no MYSQL
+
+                // Adicionando parametros para evitar SQL Injection
+                comando.Parameters.AddWithValue("@descricao", multa.Descricao);
+                comando.Parameters.AddWithValue("@valorMulta", multa.ValorMulta);
+                comando.Parameters.AddWithValue("@id", multa.Id);
+                conexao.Open(); // Abre a conexao com o MySql
+                int linhasAfetadas = comando.ExecuteNonQuery(); // Executa e mostra as linhas que foram afetadas
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception("Erro ao atualizar veiculo!");
+            }
+            finally
+            {
+                conexao.Close(); // Fecha a conexao
+            }
+        }
     }//Fim da classe
 }

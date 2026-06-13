@@ -124,6 +124,12 @@
     <Compile Include="Formulario\FormConsultaVeiculo.Designer.cs">
       <DependentUpon>FormConsultaVeiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario\FormEditarMulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormEditarMulta.Designer.cs">
+      <DependentUpon>FormEditarMulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulario\FormEditarVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormConsultaVeiculo.resx">
       <DependentUpon>FormConsultaVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormEditarMulta.resx">
+      <DependentUpon>FormEditarMulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormEditarVeiculo.resx">
       <DependentUpon>FormEditarVeiculo.cs</DependentUpon>

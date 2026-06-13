@@ -41,5 +41,11 @@ namespace AppRegistroMultas
             FormEditarVeiculo formEditarVeiculo = new FormEditarVeiculo();
             formEditarVeiculo.ShowDialog();
         }
+
+        private void btEditarMulta_Click(object sender, EventArgs e)
+        {
+            FormEditarMulta formEditarMulta = new FormEditarMulta();
+            formEditarMulta.ShowDialog();
+        }
     }
 }

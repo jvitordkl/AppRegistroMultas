@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|c:\\users\\vitor\\desktop\\appregistromultas\\appregistromultas\\formulario\\formeditarveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|solutionrelative:appregistromultas\\formulario\\formeditarveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|c:\\users\\vitor\\desktop\\appregistromultas\\appregistromultas\\formulario\\formeditarmulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|solutionrelative:appregistromultas\\formulario\\formeditarmulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\appregistromultas\\contexto\\veiculocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|solutionrelative:appregistromultas\\contexto\\veiculocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\appregistromultas\\formulario\\formeditarmulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|solutionrelative:appregistromultas\\formulario\\formeditarmulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\appregistromultas\\formulario\\formeditarveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|solutionrelative:appregistromultas\\formulario\\formeditarveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\appregistromultas\\formulario\\formeditarveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|solutionrelative:appregistromultas\\formulario\\formeditarveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\appregistromultas\\contexto\\multacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|solutionrelative:appregistromultas\\contexto\\multacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +30,66 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VeiculoContext.cs",
-              "DocumentMoniker": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Contexto\\VeiculoContext.cs",
-              "RelativeDocumentMoniker": "AppRegistroMultas\\Contexto\\VeiculoContext.cs",
-              "ToolTip": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Contexto\\VeiculoContext.cs",
-              "RelativeToolTip": "AppRegistroMultas\\Contexto\\VeiculoContext.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAAwHMAAABjAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FormEditarMulta.cs",
+              "DocumentMoniker": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormEditarMulta.cs",
+              "RelativeDocumentMoniker": "AppRegistroMultas\\Formulario\\FormEditarMulta.cs",
+              "ToolTip": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormEditarMulta.cs",
+              "RelativeToolTip": "AppRegistroMultas\\Formulario\\FormEditarMulta.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAADQAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T06:00:47.888Z"
+              "WhenOpened": "2026-06-13T17:31:57.031Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "FormEditarMulta.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormEditarMulta.cs",
+              "RelativeDocumentMoniker": "AppRegistroMultas\\Formulario\\FormEditarMulta.cs",
+              "ToolTip": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormEditarMulta.cs [Design]",
+              "RelativeToolTip": "AppRegistroMultas\\Formulario\\FormEditarMulta.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T17:12:30.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FormEditarVeiculo.cs",
               "DocumentMoniker": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs",
               "RelativeDocumentMoniker": "AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs",
               "ToolTip": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs",
               "RelativeToolTip": "AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAAwG8AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAuwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T00:04:06.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-13T00:04:06.314Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FormEditarVeiculo.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs",
               "RelativeDocumentMoniker": "AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs",
               "ToolTip": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs [Design]",
               "RelativeToolTip": "AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T23:57:19.811Z"
+              "WhenOpened": "2026-06-13T17:31:33.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MultaContext.cs",
+              "DocumentMoniker": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Contexto\\MultaContext.cs",
+              "RelativeDocumentMoniker": "AppRegistroMultas\\Contexto\\MultaContext.cs",
+              "ToolTip": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Contexto\\MultaContext.cs",
+              "RelativeToolTip": "AppRegistroMultas\\Contexto\\MultaContext.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAcwHEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T17:26:28.191Z"
             }
           ]
         }
