@@ -1,16 +1,17 @@
-﻿using System;
+﻿using AppRegistroMultas.Contexto;
+using AppRegistroMultas.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using AppRegistroMultas.Models;
-using AppRegistroMultas.Contexto;
 
 namespace AppRegistroMultas.Formulario
 {
@@ -26,24 +27,35 @@ namespace AppRegistroMultas.Formulario
             cbVeiculo.DataSource = listaVeiculo.ToList();
             cbVeiculo.DisplayMember = "Modelo";
             cbVeiculo.SelectedIndex = -1;
+            txtModelo.ReadOnly = true;
+            txtMarca.ReadOnly = true;
+            txtPlaca.ReadOnly = true;
+            txtAno.ReadOnly = true;
         }
 
         private void cbVeiculo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var linhaSelect = cbVeiculo.SelectedIndex;
-            if (linhaSelect > -1 && contExc > 0)
+            try
             {
-                MultaContext contexto = new MultaContext();
-                List<Multa> listarMultas = new List<Multa>();
-                var veiculoSelect = listaVeiculo[linhaSelect];
-                txtModelo.Text = veiculoSelect.Modelo;
-                txtMarca.Text = veiculoSelect.Marca;
-                txtPlaca.Text = veiculoSelect.Placa;
-                txtAno.Text = veiculoSelect.Ano;
-                listarMultas = contexto.ConsultarMultas(veiculoSelect.Id);
-                dtTabela.DataSource = listarMultas.ToList();
+                var linhaSelect = cbVeiculo.SelectedIndex;
+                if (linhaSelect > -1 && contExc > 0)
+                {
+                    MultaContext contexto = new MultaContext();
+                    List<Multa> listarMultas = new List<Multa>();
+                    var veiculoSelect = listaVeiculo[linhaSelect];
+                    txtModelo.Text = veiculoSelect.Modelo;
+                    txtMarca.Text = veiculoSelect.Marca;
+                    txtPlaca.Text = veiculoSelect.Placa;
+                    txtAno.Text = veiculoSelect.Ano;
+                    listarMultas = contexto.ConsultarMultas(veiculoSelect.Id);
+                    dtTabela.DataSource = listarMultas.ToList();
+                }
+                contExc++;
             }
-            contExc++;
+            catch(Exception Ex)
+            {
+
+            }
         }
     }
 }

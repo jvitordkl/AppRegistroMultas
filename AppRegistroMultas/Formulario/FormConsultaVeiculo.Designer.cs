@@ -61,7 +61,7 @@
             this.cbVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbVeiculo.FormattingEnabled = true;
             this.cbVeiculo.Location = new System.Drawing.Point(112, 92);
-            this.cbVeiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbVeiculo.Margin = new System.Windows.Forms.Padding(4);
             this.cbVeiculo.Name = "cbVeiculo";
             this.cbVeiculo.Size = new System.Drawing.Size(529, 33);
             this.cbVeiculo.TabIndex = 71;
@@ -104,7 +104,7 @@
             // 
             this.txtAno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAno.Location = new System.Drawing.Point(404, 246);
-            this.txtAno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAno.Margin = new System.Windows.Forms.Padding(4);
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(285, 30);
             this.txtAno.TabIndex = 67;
@@ -113,7 +113,7 @@
             // 
             this.txtPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlaca.Location = new System.Drawing.Point(73, 246);
-            this.txtPlaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPlaca.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(283, 30);
             this.txtPlaca.TabIndex = 66;
@@ -144,7 +144,7 @@
             // 
             this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.Location = new System.Drawing.Point(405, 172);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(285, 30);
             this.txtMarca.TabIndex = 63;
@@ -153,7 +153,7 @@
             // 
             this.txtModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModelo.Location = new System.Drawing.Point(73, 172);
-            this.txtModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(4);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(284, 30);
             this.txtModelo.TabIndex = 62;
@@ -170,8 +170,9 @@
             // dtTabela
             // 
             this.dtTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtTabela.Enabled = false;
             this.dtTabela.Location = new System.Drawing.Point(47, 367);
-            this.dtTabela.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtTabela.Margin = new System.Windows.Forms.Padding(4);
             this.dtTabela.Name = "dtTabela";
             this.dtTabela.RowHeadersWidth = 51;
             this.dtTabela.Size = new System.Drawing.Size(669, 272);
@@ -207,7 +208,7 @@
             this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtTabela);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormConsultaVeiculo";
             this.Text = "CONSULTA DE VEÍCULOS";
             ((System.ComponentModel.ISupportInitialize)(this.dtTabela)).EndInit();

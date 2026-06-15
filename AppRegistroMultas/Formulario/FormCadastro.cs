@@ -35,15 +35,49 @@ namespace AppRegistroMultas.Formulario
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
-            Veiculo veiculo = new Veiculo();
-            veiculo.Modelo = txtModelo.Text.ToString();
-            veiculo.Marca = txtMarca.Text.ToString();
-            veiculo.Placa = txtPlaca.Text.ToString();
-            veiculo.Ano = txtAno.Text.ToString();
+            try
+            {
+                string mensagem = "Faltou preencher:";
+                if (txtModelo.Text == "")
+                {
+                    mensagem += "\nModelo";
+                }
+                if (txtMarca.Text == "")
+                {
+                    mensagem += "\nMarca";
+                }
+                if (txtPlaca.Text == "")
+                {
+                    mensagem += "\nPlaca";
+                }
+                if (txtAno.Text == "")
+                {
+                    mensagem += "\nAno";
+                }
+                if(mensagem == "Faltou preencher:")
+                {
+                    Veiculo veiculo = new Veiculo();
+                    veiculo.Modelo = txtModelo.Text.ToString();
+                    veiculo.Marca = txtMarca.Text.ToString();
+                    veiculo.Placa = txtPlaca.Text.ToString();
+                    veiculo.Ano = txtAno.Text.ToString();
 
-            VeiculoContext contexto = new VeiculoContext();
-            contexto.InserirVeiculo(veiculo);
-            Limpar();
+                    VeiculoContext contexto = new VeiculoContext();
+                    contexto.InserirVeiculo(veiculo);
+                    Limpar();
+                    MessageBox.Show("Veiculo cadastrado com sucesso!", "ADS-IFRO",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(mensagem, "ADS-IFRO",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception Ex)
+            {
+
+            }
         }
     }
 }

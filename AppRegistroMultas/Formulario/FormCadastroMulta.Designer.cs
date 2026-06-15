@@ -64,7 +64,7 @@
             // 
             this.btAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAdd.Location = new System.Drawing.Point(55, 410);
-            this.btAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(183, 36);
             this.btAdd.TabIndex = 40;
@@ -76,11 +76,11 @@
             // 
             this.btCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCancelar.Location = new System.Drawing.Point(300, 410);
-            this.btCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(183, 36);
             this.btCancelar.TabIndex = 39;
-            this.btCancelar.Text = "CANCELAR";
+            this.btCancelar.Text = "LIMPAR";
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
@@ -88,7 +88,7 @@
             // 
             this.btSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSalvar.Location = new System.Drawing.Point(533, 410);
-            this.btSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btSalvar.Name = "btSalvar";
             this.btSalvar.Size = new System.Drawing.Size(183, 36);
             this.btSalvar.TabIndex = 38;
@@ -100,7 +100,7 @@
             // 
             this.dtTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtTabela.Location = new System.Drawing.Point(55, 453);
-            this.dtTabela.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtTabela.Margin = new System.Windows.Forms.Padding(4);
             this.dtTabela.Name = "dtTabela";
             this.dtTabela.RowHeadersWidth = 51;
             this.dtTabela.Size = new System.Drawing.Size(669, 214);
@@ -121,7 +121,7 @@
             // 
             this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValor.Location = new System.Drawing.Point(533, 354);
-            this.txtValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtValor.Margin = new System.Windows.Forms.Padding(4);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(185, 30);
             this.txtValor.TabIndex = 35;
@@ -141,7 +141,7 @@
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricao.Location = new System.Drawing.Point(53, 354);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(471, 30);
             this.txtDescricao.TabIndex = 33;
@@ -172,7 +172,7 @@
             // 
             this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.Location = new System.Drawing.Point(413, 180);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(285, 30);
             this.txtMarca.TabIndex = 43;
@@ -181,7 +181,7 @@
             // 
             this.txtModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModelo.Location = new System.Drawing.Point(81, 180);
-            this.txtModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(4);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(284, 30);
             this.txtModelo.TabIndex = 42;
@@ -212,7 +212,7 @@
             // 
             this.txtAno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAno.Location = new System.Drawing.Point(412, 254);
-            this.txtAno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAno.Margin = new System.Windows.Forms.Padding(4);
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(285, 30);
             this.txtAno.TabIndex = 47;
@@ -221,7 +221,7 @@
             // 
             this.txtPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlaca.Location = new System.Drawing.Point(81, 254);
-            this.txtPlaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPlaca.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(283, 30);
             this.txtPlaca.TabIndex = 46;
@@ -242,7 +242,7 @@
             this.cbVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbVeiculo.FormattingEnabled = true;
             this.cbVeiculo.Location = new System.Drawing.Point(125, 101);
-            this.cbVeiculo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbVeiculo.Margin = new System.Windows.Forms.Padding(4);
             this.cbVeiculo.Name = "cbVeiculo";
             this.cbVeiculo.Size = new System.Drawing.Size(529, 33);
             this.cbVeiculo.TabIndex = 51;
@@ -284,7 +284,7 @@
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtDescricao);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCadastroMulta";
             this.Text = "CADASTRO DE MULTA";
             ((System.ComponentModel.ISupportInitialize)(this.dtTabela)).EndInit();
