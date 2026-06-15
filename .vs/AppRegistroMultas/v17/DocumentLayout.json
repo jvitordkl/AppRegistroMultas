@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|c:\\users\\vitor\\desktop\\appregistromultas\\appregistromultas\\formulario\\formeditarveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|solutionrelative:appregistromultas\\formulario\\formeditarveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|c:\\users\\vitor\\desktop\\appregistromultas\\appregistromultas\\formulario\\formeditarveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{759558DD-B790-436D-BC4B-34B26F8F90DC}|AppRegistroMultas\\AppRegistroMultas.csproj|solutionrelative:appregistromultas\\formulario\\formeditarveiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormEditarVeiculo.cs",
+              "Title": "FormEditarVeiculo.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs",
               "RelativeDocumentMoniker": "AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs",
-              "ToolTip": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs",
-              "RelativeToolTip": "AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAwGIAAACEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Vitor\\Desktop\\AppRegistroMultas\\AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs [Design]",
+              "RelativeToolTip": "AppRegistroMultas\\Formulario\\FormEditarVeiculo.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T01:52:45.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T02:48:58.495Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

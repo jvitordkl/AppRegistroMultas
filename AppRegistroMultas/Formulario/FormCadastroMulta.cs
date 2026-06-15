@@ -21,7 +21,7 @@ namespace AppRegistroMultas.Formulario
         {
             InitializeComponent();
             VeiculoContext context = new VeiculoContext(); // Preparou a conexao
-            listaVeiculo = context.ListarVeiculo(); // Conectou e buscou no banco
+            listaVeiculo = context.ConsultarVeiculo(); // Conectou e buscou no banco
             cbVeiculo.DataSource = listaVeiculo.ToList();
             cbVeiculo.DisplayMember = "Modelo";
             cbVeiculo.SelectedIndex = -1;

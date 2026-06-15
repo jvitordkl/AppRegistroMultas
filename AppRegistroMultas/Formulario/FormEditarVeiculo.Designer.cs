@@ -121,7 +121,7 @@
             this.btSalvar.Name = "btSalvar";
             this.btSalvar.Size = new System.Drawing.Size(257, 48);
             this.btSalvar.TabIndex = 59;
-            this.btSalvar.Text = "SALVAR REGISTRO";
+            this.btSalvar.Text = "EDITAR REGISTRO";
             this.btSalvar.UseVisualStyleBackColor = false;
             this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 

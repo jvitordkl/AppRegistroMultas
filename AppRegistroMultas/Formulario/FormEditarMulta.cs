@@ -17,13 +17,13 @@ namespace AppRegistroMultas.Formulario
         int contExc = 0;
         int contExcMulta = -1;
         List<Veiculo> listaVeiculo = new List<Veiculo>();
-        List<Multa> listarMultas = new List<Multa>();
+        List<Multa> listaMulta = new List<Multa>();
         int id = -1; // Variavel que será utilizada para apagar ou editar multa
         public FormEditarMulta()
         {
             InitializeComponent();
             VeiculoContext context = new VeiculoContext(); // Preparou a conexao
-            listaVeiculo = context.ListarVeiculo(); // Conectou e buscou no banco
+            listaVeiculo = context.ConsultarVeiculo(); // Conectou e buscou no banco
             cbVeiculo.DataSource = listaVeiculo.ToList(); // Insere os veiculos no ComboBox
             cbVeiculo.DisplayMember = "Modelo"; // Organiza os veiculos do ComboBox com base no modelo
             cbVeiculo.SelectedIndex = -1; // Limpa o comboBox o deixando vazio
@@ -50,11 +50,11 @@ namespace AppRegistroMultas.Formulario
         {
             // Insere no DataGridView todas as multas do veiculo selecionado
             MultaContext contexto = new MultaContext();
-            listarMultas = contexto.ListarMultas(veiculoId);
-            dtTabela.DataSource = listarMultas.ToList();
+            listaMulta = contexto.ConsultarMultas(veiculoId);
+            dtTabela.DataSource = listaMulta.ToList();
 
             // Insere no ComboBox de multas opções das multas dos veiculo organizados pelo ID
-            cbMulta.DataSource = listarMultas.ToList();
+            cbMulta.DataSource = listaMulta.ToList();
             cbMulta.DisplayMember = "Id";
             cbMulta.SelectedIndex = -1;
             txtDescricao.Clear();
@@ -68,7 +68,7 @@ namespace AppRegistroMultas.Formulario
             if (linhaSelect > -1 && contExcMulta > 0)  // Valida se existe alguma multa no ComboBox e se foi selecionado alguma multa
             {
                 MultaContext contexto = new MultaContext();
-                var multaSelect = listarMultas[linhaSelect];
+                var multaSelect = listaMulta[linhaSelect];
                 txtDescricao.Text = multaSelect.Descricao;
                 txtValor.Text = multaSelect.ValorMulta.ToString();
                 id = multaSelect.Id; // Armazena o id da multa
@@ -112,7 +112,7 @@ namespace AppRegistroMultas.Formulario
             if(txtValor.Text!="" && txtDescricao.Text != "")
             {
                 int index = cbMulta.SelectedIndex;
-                Multa multa = listarMultas[index];
+                Multa multa = listaMulta[index];
                 if(multa.Descricao != txtDescricao.Text || multa.ValorMulta != Convert.ToDecimal(txtValor.Text))
                 {
                     multa.ValorMulta = Convert.ToDecimal(txtValor.Text);
@@ -122,7 +122,7 @@ namespace AppRegistroMultas.Formulario
                     if(resposta == DialogResult.Yes)
                     {
                         MultaContext contexto = new MultaContext();
-                        contexto.EditarMulta(multa);
+                        contexto.AtualizarMulta(multa);
                         MessageBox.Show("Multa atualizada com sucesso",
                         "ADS-IFRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         AtualizarMultas();

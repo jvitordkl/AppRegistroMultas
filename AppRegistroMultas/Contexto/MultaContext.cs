@@ -23,17 +23,19 @@ namespace AppRegistroMultas.Contexto
             conexao = new MySqlConnection(dados_conexao);
         }// Fim do método construtor
 
-        public List<Multa> ListarMultas(int id)
+        public List<Multa> ConsultarMultas(int id) // Método de consultar multas
         {
-            List<Multa> listaDeMultasParaExportar = new List<Multa>();
-            string sql = "SELECT * FROM multa where veiculoId = @id";
+            List<Multa> listaDeMultasParaExportar = new List<Multa>(); // Lista onde será armazenada as multas consultadas
+            string sql = "SELECT * FROM multa where veiculoId = @id"; // Comando SQL de consulta baseado no id do veiculo
             try
             {
-                MySqlCommand comando = new MySqlCommand(sql, conexao);
-                comando.Parameters.AddWithValue("@id", id);
-                conexao.Open();
-                MySqlDataReader dados = comando.ExecuteReader();
-                while (dados.Read())
+                MySqlCommand comando = new MySqlCommand(sql, conexao); // Quem realizará a consulta
+                comando.Parameters.AddWithValue("@id", id); // Adicionando parametro para evitar SQL injection
+                conexao.Open(); // Abre a conexao
+                MySqlDataReader dados = comando.ExecuteReader(); // Executa o comando SQL no banco e armazena no objeto dados
+
+                // loop que converte os dados para que o C# aceite e adiciona na lista
+                while (dados.Read()) 
                 {
                     Multa multa = new Multa();
                     multa.Id = Convert.ToInt32(dados["id"]);
@@ -43,65 +45,73 @@ namespace AppRegistroMultas.Contexto
                     listaDeMultasParaExportar.Add(multa);
                 }
 
-                conexao.Close();
+                conexao.Close(); // Fecha a conexao
             }
-            catch (Exception Ex)
+            catch (Exception Ex) // Informa caso aconteça algum erro durante a consulta
             {
-                MessageBox.Show(Ex.Message);
+                MessageBox.Show("Erro ao realizar a consulta!","ADS-IFRO",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Erro ao consultar as multas!");
             }
-            return listaDeMultasParaExportar;
-        } // Fim do método ListarMultas
+            return listaDeMultasParaExportar; // Retorna a lista para o formulário que está requisitando
+        } // fim do método de consultar multas
 
-        public void InserirMulta(Multa multa)
+        public void InserirMulta(Multa multa) // Método para inserir multa
         {
+            // Comando SQL de inserir multa
             string sql = "INSERT INTO multa (descricao,valorMulta,veiculoID) VALUES (@descricao,@valorMulta,@veiculoID)";
             try
             {
-                MySqlCommand comando = new MySqlCommand(sql, conexao);
+                MySqlCommand comando = new MySqlCommand(sql, conexao); // Quem irá inserir a multa
 
+                // Adicionando parametros para impedir SQL Injection
                 comando.Parameters.AddWithValue("@descricao", multa.Descricao);
                 comando.Parameters.AddWithValue("@valorMulta", multa.ValorMulta);
                 comando.Parameters.AddWithValue("@veiculoId", multa.VeiculoId);
 
-                conexao.Open();
-                int linhasAfetadas = comando.ExecuteNonQuery();
+                conexao.Open(); // Abre a conexao
+                int linhasAfetadas = comando.ExecuteNonQuery(); // Realiza o cadastro da multa
             }
-            catch (Exception Ex)
+            catch (Exception Ex) // Informa caso ocorra algum erro ao cadastrar a multa
             {
-                throw new Exception("Erro ao inserir multa!");
+                MessageBox.Show("Erro ao inserir multa!", "ADS-IFRO",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("erro ao inserir multa!");
             }
-            finally
+            finally // Execuratá independente se ocorrer erro ou não
             {
-                conexao.Close();
+                conexao.Close(); // Fecha a conexão
             }
-        }// Fim do método InserirMulta
+        } // Fim do método para inserir multa
 
-        public void DeletarMulta(int id)
+        public void DeletarMulta(int id)  // Método de deletar a multa
         {
             // Comandos para inserir o veiculo no MySql
             string sql = "DELETE FROM multa where id = @id";
 
             try
             {
-                MySqlCommand comando = new MySqlCommand(sql, conexao); // Comando que vai inserir o veiculo no MYSQL
+                MySqlCommand comando = new MySqlCommand(sql, conexao); // Comando que vai deletar o veiculo no MYSQL
                 // Adicionando parametros para evitar SQL Injection
                 comando.Parameters.AddWithValue("@id", id);
                 conexao.Open(); // Abre a conexao com o MySql
-                int linhasAfetadas = comando.ExecuteNonQuery(); // Executa e mostra as linhas que foram afetadas
+                int linhasAfetadas = comando.ExecuteNonQuery(); // Executa o comando SQL de deletar multa
             }
-            catch (Exception Ex)
+            catch (Exception Ex) // Informa caso algum erro ocorra
             {
-                throw new Exception("Erro ao apagar multa!");
+                MessageBox.Show("Erro ao deletar a multa!", "ADS-IFRO",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Erro ao deletar multa!");
             }
-            finally
+            finally // Executará independente se ocorrer erro ou não
             {
                 conexao.Close(); // Fecha a conexao
             }
-        }
+        }//Fim do método de deletar a multa
 
-        public void EditarMulta(Multa multa)
+        public void AtualizarMulta(Multa multa)
         {
-            // Comandos para inserir o veiculo no MySql
+            // Comandos para editar o veiculo no MySql
             string sql = "UPDATE multa SET DESCRICAO = @descricao, VALORMULTA=@valorMulta WHERE ID=@id";
 
             try
@@ -113,13 +123,15 @@ namespace AppRegistroMultas.Contexto
                 comando.Parameters.AddWithValue("@valorMulta", multa.ValorMulta);
                 comando.Parameters.AddWithValue("@id", multa.Id);
                 conexao.Open(); // Abre a conexao com o MySql
-                int linhasAfetadas = comando.ExecuteNonQuery(); // Executa e mostra as linhas que foram afetadas
+                int linhasAfetadas = comando.ExecuteNonQuery(); // Executa o comando SQL e atualiza no banco
             }
-            catch (Exception Ex)
+            catch (Exception Ex) // Informa caso aconteça algum erro
             {
+                MessageBox.Show("Erro ao atualiza a multa!", "ADS-IFRO",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw new Exception("Erro ao atualizar multa!");
             }
-            finally
+            finally // Executará independete se ocorrer erro
             {
                 conexao.Close(); // Fecha a conexao
             }

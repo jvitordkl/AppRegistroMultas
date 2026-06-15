@@ -24,7 +24,7 @@ namespace AppRegistroMultas.Contexto
             conexao = new MySqlConnection(dados_conexao);
         }// Fim do construtor
 
-        public List<Veiculo> ListarVeiculo()
+        public List<Veiculo> ConsultarVeiculo() // Método para consultar veiculos
         {
             List<Veiculo> listaDeVeiculosParaExportar = new List<Veiculo>(); // Para retornar os veiculos consultados
             string sql = "SELECT * FROM veiculo"; // Comando de consulta no MySql
@@ -48,9 +48,11 @@ namespace AppRegistroMultas.Contexto
                 }
                 conexao.Close(); // Fecha conexao
             }
-            catch (Exception Ex)
+            catch (Exception Ex) // Executa caso algum erro aconteça
             {
-                throw new Exception("Erro na consulta!");
+                MessageBox.Show("Erro ao consultar veiculos!", "ADS-IFRO",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Erro ao consultar veiculos");
             }
             return listaDeVeiculosParaExportar; // Retornando a lista dos veiculos consultados
         }// Fim do método de consultar veiculos
@@ -73,42 +75,46 @@ namespace AppRegistroMultas.Contexto
                 conexao.Open(); // Abre a conexao com o MySql
                 int linhasAfetadas = comando.ExecuteNonQuery(); // Executa e mostra as linhas que foram afetadas
             }
-            catch (Exception Ex)
+            catch (Exception Ex) // Executa caso algum erro aconteça
             {
-                throw new Exception("Erro ao inserir veiculo!");
+                MessageBox.Show("Erro ao cadastrar o veiculo!", "ADS-IFRO",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Erro ao inserir veiculo");
             }
-            finally
+            finally // Executa independente se der erro ou não
             {
                 conexao.Close(); // Fecha a conexao
             }
-        }// Fim do método InserirVeiculo
+        }// Fim do método de inserir veiculo
 
-        public void DeletarVeiculo(int id)
+        public void DeletarVeiculo(int id) // Metodo para deletar veiculo
         {
-            // Comandos para inserir o veiculo no MySql
+            // Comandos para deletar o veiculo no MySql
             string sql = "DELETE FROM veiculo where id = @id";
 
             try
             {
-                MySqlCommand comando = new MySqlCommand(sql, conexao); // Comando que vai inserir o veiculo no MYSQL
+                MySqlCommand comando = new MySqlCommand(sql, conexao); // Comando que vai deletar o veiculo no MYSQL
                 // Adicionando parametros para evitar SQL Injection
                 comando.Parameters.AddWithValue("@id", id);
                 conexao.Open(); // Abre a conexao com o MySql
-                int linhasAfetadas = comando.ExecuteNonQuery(); // Executa e mostra as linhas que foram afetadas
+                int linhasAfetadas = comando.ExecuteNonQuery(); // Executa e deleta o cadastro
             }
-            catch (Exception Ex)
+            catch (Exception Ex) // Informa caso algum erro aconteça
             {
-                throw new Exception("Erro ao apagar veiculo!");
+                MessageBox.Show("Erro ao deletar o veiculo!", "ADS-IFRO",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Erro ao deletar o veiculo!");
             }
-            finally
+            finally // Executa independente se der erro ou não
             {
                 conexao.Close(); // Fecha a conexao
             }
         }
 
-        public void AtualizarVeiculo(Veiculo veiculo)
+        public void AtualizarVeiculo(Veiculo veiculo) // Metodo para atualizar veiculo
         {
-            // Comandos para inserir o veiculo no MySql
+            // Comandos para atualizar o veiculo no MySql
             string sql = "UPDATE veiculo SET MODELO = @modelo,MARCA=@marca,PLACA=@placa,ANO=@ano WHERE ID=@id";
 
             try
@@ -123,13 +129,15 @@ namespace AppRegistroMultas.Contexto
                 comando.Parameters.AddWithValue("@id", veiculo.Id);
 
                 conexao.Open(); // Abre a conexao com o MySql
-                int linhasAfetadas = comando.ExecuteNonQuery(); // Executa e mostra as linhas que foram afetadas
+                int linhasAfetadas = comando.ExecuteNonQuery(); // Executa e atualiza o veiculo
             }
-            catch (Exception Ex)
+            catch (Exception Ex) // Informa caso algum erro acontece
             {
-                throw new Exception("Erro ao atualizar veiculo!");
+                MessageBox.Show("Erro ao cadastrar o veiculo!", "ADS-IFRO",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Erro ao atualizar o veiculo!");
             }
-            finally
+            finally // Executa independente se ter erro ou não
             {
                 conexao.Close(); // Fecha a conexao
             }

@@ -22,7 +22,7 @@ namespace AppRegistroMultas.Formulario
         {
             InitializeComponent();
             VeiculoContext context = new VeiculoContext(); // Preparou a conexao
-            listaVeiculo = context.ListarVeiculo(); // Conectou e buscou no banco
+            listaVeiculo = context.ConsultarVeiculo(); // Conectou e buscou no banco
             cbVeiculo.DataSource = listaVeiculo.ToList();
             cbVeiculo.DisplayMember = "Modelo";
             cbVeiculo.SelectedIndex = -1;
@@ -40,7 +40,7 @@ namespace AppRegistroMultas.Formulario
                 txtMarca.Text = veiculoSelect.Marca;
                 txtPlaca.Text = veiculoSelect.Placa;
                 txtAno.Text = veiculoSelect.Ano;
-                listarMultas = contexto.ListarMultas(veiculoSelect.Id);
+                listarMultas = contexto.ConsultarMultas(veiculoSelect.Id);
                 dtTabela.DataSource = listarMultas.ToList();
             }
             contExc++;
