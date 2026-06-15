@@ -106,5 +106,35 @@ namespace AppRegistroMultas.Formulario
                 }
             }
         }
+
+        private void btSalvar_Click(object sender, EventArgs e)
+        {
+            if(txtValor.Text!="" && txtDescricao.Text != "")
+            {
+                int index = cbMulta.SelectedIndex;
+                Multa multa = listarMultas[index];
+                if(multa.Descricao != txtDescricao.Text || multa.ValorMulta != Convert.ToDecimal(txtValor.Text))
+                {
+                    multa.ValorMulta = Convert.ToDecimal(txtValor.Text);
+                    multa.Descricao = txtDescricao.Text.ToString();
+                    var resposta = MessageBox.Show("Tem certeza que deseja atulizar essa multa?",
+                        "ADS-IFRO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if(resposta == DialogResult.Yes)
+                    {
+                        MultaContext contexto = new MultaContext();
+                        contexto.EditarMulta(multa);
+                        MessageBox.Show("Multa atualizada com sucesso",
+                        "ADS-IFRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        AtualizarMultas();
+                        cbMulta.SelectedIndex = index;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Multa não foi atualizada",
+                        "ADS-IFRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+        }
     }
 }

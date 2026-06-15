@@ -82,6 +82,7 @@ namespace AppRegistroMultas.Formulario
                         VeiculoContext contexto = new VeiculoContext();
                         contexto.DeletarVeiculo(id);
                         AtualizarPagina();
+                        id = -1;
                         cbVeiculo.SelectedIndex = -1;
                         txtModelo.Clear();
                         txtPlaca.Clear();
@@ -95,7 +96,7 @@ namespace AppRegistroMultas.Formulario
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
-            if(txtModelo.Text != "" && txtMarca.Text!= "" && txtPlaca.Text!="" && txtAno.Text != "")
+            if((txtModelo.Text != "" && txtMarca.Text!= "" && txtPlaca.Text!="" && txtAno.Text != "") && cbVeiculo.SelectedIndex > 0)
             {
                 Veiculo veiculo = listaVeiculo[cbVeiculo.SelectedIndex];
                 if(veiculo.Modelo != txtModelo.Text.ToString() ||

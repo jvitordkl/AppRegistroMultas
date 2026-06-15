@@ -167,6 +167,7 @@
             this.btSalvar.TabIndex = 73;
             this.btSalvar.Text = "EDITAR REGISTRO";
             this.btSalvar.UseVisualStyleBackColor = false;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // txtAno
             // 

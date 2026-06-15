@@ -117,7 +117,7 @@ namespace AppRegistroMultas.Contexto
             }
             catch (Exception Ex)
             {
-                throw new Exception("Erro ao atualizar veiculo!");
+                throw new Exception("Erro ao atualizar multa!");
             }
             finally
             {
