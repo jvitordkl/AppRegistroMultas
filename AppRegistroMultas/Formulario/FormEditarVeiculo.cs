@@ -143,38 +143,56 @@ namespace AppRegistroMultas.Formulario
         {
             try
             {
+                string novaPlaca = txtPlaca.Text.ToString();
+                string novoAno = txtAno.Text.ToString();
                 if ((txtModelo.Text != "" && txtMarca.Text != "" && txtPlaca.Text != "" && txtAno.Text != "") && cbVeiculo.SelectedIndex >= 0)
                 {
                     Veiculo veiculo = listaVeiculo[cbVeiculo.SelectedIndex];
                     if (veiculo.Modelo != txtModelo.Text.ToString() ||
                         veiculo.Marca != txtMarca.Text.ToString() ||
-                        veiculo.Placa != txtPlaca.Text.ToString() ||
-                        veiculo.Ano != txtAno.Text.ToString())
+                        veiculo.Placa != novaPlaca ||
+                        veiculo.Ano != novoAno)
                     {
-                        var escolha = MessageBox.Show("Realmente Deseja atualizar esse cadastro?", "ADS-IFRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (escolha == DialogResult.Yes)
+                        if (Cadastro(veiculo,novaPlaca))
                         {
-                            veiculo.Modelo = txtModelo.Text.ToString();
-                            veiculo.Marca = txtMarca.Text.ToString();
-                            veiculo.Placa = txtPlaca.Text.ToString();
-                            veiculo.Ano = txtAno.Text.ToString();
-                            int index = cbVeiculo.SelectedIndex;
-                            VeiculoContext contexto = new VeiculoContext();
-                            contexto.AtualizarVeiculo(veiculo);
-                            MessageBox.Show("Veiculo atualizado com sucesso", "ADS-IFRO",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            VeiculoContext context = new VeiculoContext(); // Preparou a conexao
-                            listaVeiculo = context.ConsultarVeiculo(); // Conectou e buscou no banco
+                            if (AnoNumerico(novoAno))
+                            {
+                                var escolha = MessageBox.Show("Realmente Deseja atualizar esse cadastro?", "ADS-IFRO",
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                if (escolha == DialogResult.Yes)
+                                {
+                                    veiculo.Modelo = txtModelo.Text.ToString();
+                                    veiculo.Marca = txtMarca.Text.ToString();
+                                    veiculo.Placa = txtPlaca.Text.ToString();
+                                    veiculo.Ano = txtAno.Text.ToString();
+                                    int index = cbVeiculo.SelectedIndex;
+                                    VeiculoContext contexto = new VeiculoContext();
+                                    contexto.AtualizarVeiculo(veiculo);
+                                    MessageBox.Show("Veiculo atualizado com sucesso", "ADS-IFRO",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    VeiculoContext context = new VeiculoContext(); // Preparou a conexao
+                                    listaVeiculo = context.ConsultarVeiculo(); // Conectou e buscou no banco
 
-                            cbVeiculo.DataSource = listaVeiculo.ToList();
-                            cbVeiculo.DisplayMember = "Modelo";
-                            cbVeiculo.SelectedIndex = index;
+                                    cbVeiculo.DataSource = listaVeiculo.ToList();
+                                    cbVeiculo.DisplayMember = "Modelo";
+                                    cbVeiculo.SelectedIndex = index;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Veiculo não foi atualizado!", "ADS-IFRO",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Insira um ano válido!", "ADS-IFRO",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Veiculo não foi atualizado!", "ADS-IFRO",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Essa placa já está cadastrada", "ADS-IFRO",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
@@ -195,7 +213,38 @@ namespace AppRegistroMultas.Formulario
             {
 
             }
-            
+        }
+        private bool Cadastro(Veiculo veiculo,string novaPlaca)
+        {
+            try
+            {
+                foreach (Veiculo v in listaVeiculo)
+                {
+                    if (novaPlaca == v.Placa && veiculo.Id != v.Id)
+                        return false;
+                }
+                return true;
+            }
+            catch (Exception Ex)
+            {
+                return false;
+            }
+        }
+        private bool AnoNumerico(string ano)
+        {
+            if (ano.All(char.IsNumber))
+            {
+                int anoInformado = Convert.ToInt32(ano);
+                DateTime dataAtual = DateTime.Today;
+                int anoAtual = Convert.ToInt32(dataAtual.Year);
+
+                // Válida se a data informada está entre o ano atual e o ano do surgimento do carro
+                if (anoInformado >= 1885 && anoInformado <= anoAtual)
+                    return true;
+                else
+                    return false;
+            }
+            return false;
         }
     }
 }
