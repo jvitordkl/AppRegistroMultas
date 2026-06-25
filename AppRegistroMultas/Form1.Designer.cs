@@ -33,6 +33,7 @@
             this.btCadastroVeiculo = new System.Windows.Forms.Button();
             this.btEditarVeiculo = new System.Windows.Forms.Button();
             this.btEditarMulta = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btConsulta
@@ -95,11 +96,22 @@
             this.btEditarMulta.UseVisualStyleBackColor = true;
             this.btEditarMulta.Click += new System.EventHandler(this.btEditarMulta_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(40, 264);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(286, 75);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "FEITO POR:\r\nJoão Vitor Alvernaz Mariano\r\nNawane Krauze de Souza\r\n";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 273);
+            this.ClientSize = new System.Drawing.Size(707, 347);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btEditarMulta);
             this.Controls.Add(this.btEditarVeiculo);
             this.Controls.Add(this.btConsulta);
@@ -109,6 +121,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -118,6 +131,7 @@
         private System.Windows.Forms.Button btCadastroVeiculo;
         private System.Windows.Forms.Button btEditarVeiculo;
         private System.Windows.Forms.Button btEditarMulta;
+        private System.Windows.Forms.Label label1;
     }
 }
 
